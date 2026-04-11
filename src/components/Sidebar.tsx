@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayoutDashboard, MessageSquare, BarChart3, Settings, Globe, PieChart, Lightbulb } from 'lucide-react';
+import { LayoutDashboard, MessageSquare, BarChart3, Globe, PieChart, Lightbulb, Scale, Newspaper } from 'lucide-react';
 import { cn } from '../lib/utils';
 
 interface SidebarProps {
@@ -13,6 +13,8 @@ export default function Sidebar({ activeTab, setActiveTab }: SidebarProps) {
     { id: 'feed', label: 'Analyst Feedback', icon: MessageSquare },
     { id: 'platforms', label: 'Platform Insights', icon: BarChart3 },
     { id: 'insights', label: 'Deep Insights', icon: PieChart },
+    { id: 'regulations', label: 'Regulatory Changes', icon: Scale },
+    { id: 'news', label: 'Fintech News', icon: Newspaper },
     { id: 'recommendations', label: 'Recommendations', icon: Lightbulb },
   ];
 
@@ -23,7 +25,7 @@ export default function Sidebar({ activeTab, setActiveTab }: SidebarProps) {
         <h1 className="font-bold text-lg leading-tight">CLM Analyst<br/>Insights</h1>
       </div>
       
-      <nav className="flex-1 px-4 space-y-2 mt-4">
+      <nav className="flex-1 px-4 space-y-2 mt-4 overflow-y-auto">
         {navItems.map((item) => {
           const Icon = item.icon;
           const isActive = activeTab === item.id;
@@ -38,7 +40,7 @@ export default function Sidebar({ activeTab, setActiveTab }: SidebarProps) {
                   : "hover:bg-slate-800 hover:text-white"
               )}
             >
-              <Icon className="w-5 h-5" />
+              <Icon className="w-5 h-5 shrink-0" />
               {item.label}
             </button>
           );
@@ -46,10 +48,9 @@ export default function Sidebar({ activeTab, setActiveTab }: SidebarProps) {
       </nav>
 
       <div className="p-4 border-t border-slate-800">
-        <button className="w-full flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-800 transition-colors text-sm font-medium">
-          <Settings className="w-5 h-5" />
-          Settings
-        </button>
+        <div className="text-xs text-slate-500 leading-relaxed px-2">
+          Data & insights synthesized via AI consortium (Perplexity, Llama, ChatGPT, Claude).
+        </div>
       </div>
     </div>
   );

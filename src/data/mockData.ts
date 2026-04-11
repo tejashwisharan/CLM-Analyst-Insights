@@ -295,3 +295,69 @@ export const platformStats = [
   { name: 'Encompass', marketShare: 5, avgSatisfaction: 4.2, topIssue: 'Performance' },
   { name: 'In-House Custom', marketShare: 3, avgSatisfaction: 2.8, topIssue: 'Maintenance' },
 ];
+
+export const regulatoryChanges = [
+  {
+    id: 'REG-2026-1',
+    year: 2026,
+    region: 'EU',
+    regulation: 'EU AML Authority (AMLA) Operationalization',
+    description: 'The new central EU AML Authority begins direct supervision of the riskiest cross-border financial entities and coordinates national supervisors.',
+    clmImpact: 'High',
+    impactDetails: 'Forces multinational banks to harmonize their CLM processes across all EU member states to comply with a single supervisory standard, rather than fragmented local rules.'
+  },
+  {
+    id: 'REG-2025-1',
+    year: 2025,
+    region: 'EU',
+    regulation: 'Digital Operational Resilience Act (DORA)',
+    description: 'Sets uniform requirements for the security of network and information systems of companies and organizations operating in the financial sector.',
+    clmImpact: 'Medium',
+    impactDetails: 'While primarily an IT resilience act, it heavily impacts CLM vendor risk management. Financial institutions must ensure their SaaS CLM providers (like Fenergo, Pega) meet strict DORA resilience standards.'
+  },
+  {
+    id: 'REG-2024-1',
+    year: 2024,
+    region: 'USA',
+    regulation: 'Corporate Transparency Act (CTA) BOI Reporting',
+    description: 'Requires tens of millions of reporting companies to file Beneficial Ownership Information (BOI) reports with FinCEN.',
+    clmImpact: 'High',
+    impactDetails: 'Massive impact on UBO unwrapping. CLM systems must now reconcile customer-provided beneficial ownership data against the new FinCEN database (once access rules are fully implemented for FIs).'
+  },
+  {
+    id: 'REG-2024-2',
+    year: 2024,
+    region: 'EU',
+    regulation: 'Markets in Crypto-Assets (MiCA)',
+    description: 'Creates a comprehensive regulatory framework for crypto-assets in the EU, including strict AML/KYC requirements for Crypto-Asset Service Providers (CASPs).',
+    clmImpact: 'High',
+    impactDetails: 'Forces CLM platforms to adapt to crypto-specific KYC requirements, including wallet screening and travel rule integrations, expanding the traditional definition of a "client".'
+  },
+  {
+    id: 'REG-2023-1',
+    year: 2023,
+    region: 'UK',
+    regulation: 'Economic Crime and Corporate Transparency Act (ECCTA)',
+    description: 'Reforms Companies House, introducing identity verification for all new and existing registered company directors, People with Significant Control (PSCs), and those delivering documents.',
+    clmImpact: 'High',
+    impactDetails: 'CLM systems integrating with UK Companies House must update their API connectors to capture and verify the new identity verification status of directors and PSCs.'
+  },
+  {
+    id: 'REG-2022-1',
+    year: 2022,
+    region: 'Global',
+    regulation: 'Unprecedented Global Sanctions (Russia/Belarus)',
+    description: 'Rapid, uncoordinated rollout of massive sanctions packages by US (OFAC), EU, UK, and others following geopolitical events.',
+    clmImpact: 'Critical',
+    impactDetails: 'Exposed major flaws in CLM screening engines. Forced platforms to update screening lists intra-day and handle complex "sanctions by extension" (50% rule) calculations dynamically.'
+  },
+  {
+    id: 'REG-2021-1',
+    year: 2021,
+    region: 'USA',
+    regulation: 'Anti-Money Laundering Act of 2020 (AMLA) Implementation Begins',
+    description: 'The most sweeping overhaul of US AML laws since the USA PATRIOT Act, shifting focus from technical compliance to "effective and reasonably designed" programs.',
+    clmImpact: 'Medium',
+    impactDetails: 'Shifted CLM requirements from strict checklist-based onboarding to dynamic, continuous risk scoring based on national AML priorities.'
+  }
+];
