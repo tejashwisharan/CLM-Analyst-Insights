@@ -1,5 +1,5 @@
 import React from 'react';
-import { Lightbulb, CheckCircle, ArrowRight, Zap, ShieldCheck, Database } from 'lucide-react';
+import { Lightbulb, CheckCircle, ArrowRight, Zap, ShieldCheck, Database, TrendingUp, Clock, Calculator, DollarSign } from 'lucide-react';
 
 export default function Recommendations() {
   const recommendations = [
@@ -67,6 +67,40 @@ export default function Recommendations() {
         <h2 className="text-3xl font-bold text-slate-900">Strategic Recommendations</h2>
         <p className="text-slate-500 mt-1">Suggested capabilities to build based on global analyst feedback and pain points.</p>
       </header>
+
+      {/* Projected ROI & Savings Banner */}
+      <div className="bg-emerald-900 rounded-xl p-8 text-white shadow-lg mb-8">
+        <div className="flex items-center gap-3 mb-6">
+          <TrendingUp className="w-6 h-6 text-emerald-400" />
+          <h3 className="text-xl font-bold">Projected ROI & Annual Savings</h3>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-emerald-800 p-5 rounded-lg border border-emerald-700">
+            <h4 className="text-emerald-300 text-sm font-semibold uppercase tracking-wider mb-2 flex items-center gap-2">
+              <Clock className="w-4 h-4" /> Time Saved Per Case
+            </h4>
+            <p className="text-3xl font-bold">~3.8 Hours</p>
+            <p className="text-sm text-emerald-400 mt-2">Cumulative reduction in manual processing time.</p>
+          </div>
+          <div className="bg-emerald-800 p-5 rounded-lg border border-emerald-700">
+            <h4 className="text-emerald-300 text-sm font-semibold uppercase tracking-wider mb-2 flex items-center gap-2">
+              <Calculator className="w-4 h-4" /> Operational Capacity
+            </h4>
+            <p className="text-3xl font-bold">+45%</p>
+            <p className="text-sm text-emerald-400 mt-2">Increase in analyst case-handling capacity.</p>
+          </div>
+          <div className="bg-emerald-800 p-5 rounded-lg border border-emerald-700 relative overflow-hidden">
+            <div className="absolute -right-4 -bottom-4 opacity-10">
+              <DollarSign className="w-32 h-32" />
+            </div>
+            <h4 className="text-emerald-300 text-sm font-semibold uppercase tracking-wider mb-2 flex items-center gap-2">
+              <DollarSign className="w-4 h-4" /> Estimated Annual Savings
+            </h4>
+            <p className="text-3xl font-bold">$15.2M</p>
+            <p className="text-sm text-emerald-400 mt-2">Based on 100k cases/year at $40/hr blended rate.</p>
+          </div>
+        </div>
+      </div>
 
       <div className="space-y-6">
         {recommendations.map((rec) => {

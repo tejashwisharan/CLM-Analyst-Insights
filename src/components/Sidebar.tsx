@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayoutDashboard, MessageSquare, BarChart3, Globe, PieChart, Lightbulb, Scale, Newspaper } from 'lucide-react';
+import { LayoutDashboard, MessageSquare, BarChart3, Globe, PieChart, Lightbulb, Scale, Newspaper, Target } from 'lucide-react';
 import { cn } from '../lib/utils';
 
 interface SidebarProps {
@@ -16,6 +16,7 @@ export default function Sidebar({ activeTab, setActiveTab }: SidebarProps) {
     { id: 'regulations', label: 'Regulatory Changes', icon: Scale },
     { id: 'news', label: 'Fintech News', icon: Newspaper },
     { id: 'recommendations', label: 'Recommendations', icon: Lightbulb },
+    { id: 'excite', label: 'X-Sight Opportunities', icon: Target },
   ];
 
   return (
@@ -25,7 +26,7 @@ export default function Sidebar({ activeTab, setActiveTab }: SidebarProps) {
         <h1 className="font-bold text-lg leading-tight">CLM Analyst<br/>Insights</h1>
       </div>
       
-      <nav className="flex-1 px-4 space-y-2 mt-4 overflow-y-auto">
+      <nav className="flex-1 px-4 space-y-2 mt-4 overflow-y-auto pb-6">
         {navItems.map((item) => {
           const Icon = item.icon;
           const isActive = activeTab === item.id;
