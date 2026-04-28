@@ -4,7 +4,7 @@ import {
   PieChart, Pie, Cell, LineChart, Line, Legend
 } from 'recharts';
 import { mockFeedback, painPointCategories } from '../data/mockData';
-import { Clock, AlertTriangle, CheckCircle2, TrendingDown } from 'lucide-react';
+import { Clock, AlertTriangle, CheckCircle2, TrendingDown, MessageSquare } from 'lucide-react';
 
 export default function Dashboard() {
   // Calculate metrics
@@ -126,6 +126,3 @@ export default function Dashboard() {
     </div>
   );
 }
-
-// Need to import MessageSquare for the first KPI card
-import { MessageSquare } from 'lucide-react';
