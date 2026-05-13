@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayoutDashboard, MessageSquare, BarChart3, Globe, PieChart, Lightbulb, Scale, Newspaper, Target } from 'lucide-react';
+import { LayoutDashboard, MessageSquare, BarChart3, Globe, PieChart, Lightbulb, Scale, Newspaper } from 'lucide-react';
 import { cn } from '../lib/utils';
 
 interface SidebarProps {
@@ -16,7 +16,6 @@ export default function Sidebar({ activeTab, setActiveTab }: SidebarProps) {
     { id: 'regulations', label: 'Regulatory Changes', icon: Scale },
     { id: 'news', label: 'Fintech News', icon: Newspaper },
     { id: 'recommendations', label: 'Recommendations', icon: Lightbulb },
-    { id: 'excite', label: 'X-Sight Opportunities', icon: Target },
   ];
 
   return (

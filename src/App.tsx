@@ -7,7 +7,6 @@ import Insights from './components/Insights';
 import RegulatoryTimeline from './components/RegulatoryTimeline';
 import Recommendations from './components/Recommendations';
 import FintechNews from './components/FintechNews';
-import ExciteOnboard from './components/ExciteOnboard';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('dashboard');
@@ -24,7 +23,6 @@ export default function App() {
         {activeTab === 'regulations' && <RegulatoryTimeline />}
         {activeTab === 'news' && <FintechNews />}
         {activeTab === 'recommendations' && <Recommendations />}
-        {activeTab === 'excite' && <ExciteOnboard />}
       </main>
     </div>
   );
